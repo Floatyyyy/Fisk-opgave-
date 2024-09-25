@@ -1,11 +1,15 @@
 import pygame
 from Vector import *
+from flock import *
 
 class Fish:
-    def __init__(self, position, velocity, fish_img):
+    def __init__(self, position, velocity):
         self.position = position
         self.velocity = velocity
-        self.fish_img = fish_img
+        fishes_img = ["Fisk.png","Squid.png","Shark.png"]
+        scaled_fish_img = [pygame.transform.scale(pygame.image.load(img), (35,35)) for img in fishes_img]
+
+        self.fish_img = random.choice(scaled_fish_img)
 
 
     def update(self):

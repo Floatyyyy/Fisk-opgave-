@@ -8,11 +8,10 @@ screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 running = True
 
-fish_img = ["Fisk.png","Squid.png","Shark.png"]
-scaled_fish_img = [pygame.transform.scale(pygame.image.load(img), (35,35)) for img in fish_img]
-
 num_fish = 15
-flock = Flock(num_fish, fish_img)
+flock = Flock(num_fish)
+
+
 
 while running:
     for event in pygame.event.get():
