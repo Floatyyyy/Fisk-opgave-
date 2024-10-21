@@ -8,8 +8,8 @@ screen = pygame.display.set_mode((800, 600))
 clock = pygame.time.Clock()
 running = True
 
-num_fish = 15
-flock = Flock(num_fish)
+num_fish = 50
+flock = Flock(num_fish,screen)
 
 
 
